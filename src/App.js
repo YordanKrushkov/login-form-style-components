@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import theme from './app/constants/theme';
+import ForgotPasswordForm from './Pages/Login/ForgotPassword';
+import Login from './Pages/Login/LoginPage';
 function App() {
+  const [isForgotPassword, setIsForgotPassword] = useState(true)
+
+  const toggle = () => setIsForgotPassword(!isForgotPassword)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      {
+        isForgotPassword
+        ? <ForgotPasswordForm toggle={toggle}/>
+        : <Login toggle={toggle}/>
+      }
+    </ThemeProvider>
+    
   );
 }
 
