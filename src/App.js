@@ -4,7 +4,7 @@ import theme from './app/constants/theme';
 import ForgotPasswordForm from './Pages/Login/ForgotPassword';
 import Login from './Pages/Login/LoginPage';
 function App() {
-  const [isForgotPassword, setIsForgotPassword] = useState(true)
+  const [isForgotPassword, setIsForgotPassword] = useState(false)
 
   const toggle = () => setIsForgotPassword(!isForgotPassword)
   return (
