@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { tablet } from "../../app/constants/mediaQueries";
 
-const StyledButton = styled.div` 
+const StyledButton = styled.button` 
   width: 100%;
   padding: ${({ primary }) => primary ? '15px 0' : '12px 57px'};
   margin-top: ${({ primary }) => primary && '20px'};

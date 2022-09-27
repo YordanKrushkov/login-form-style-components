@@ -1,6 +1,6 @@
 import { StyledButton } from './index.styled';
 
-const Button = ({ type = 'submit',text, primary, color='baseColor', clickHandler}) => {
+const Button = ({ type, text, primary, color='baseColor', clickHandler}) => {
   return ( 
     <StyledButton type={type} primary={primary} color={color} onClick={clickHandler}>
       {text}

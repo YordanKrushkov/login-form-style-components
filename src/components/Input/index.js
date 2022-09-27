@@ -10,10 +10,10 @@ const RenderIcon = ({id}) => {
 
 }
 
-const Input = ({ placeholder, id}) => {
+const Input = ({ type, placeholder, id, onChange}) => {
   return ( 
     <InputWrapper>
-      <StyledInput placeholder={placeholder} id={id}/>
+      <StyledInput type={type} placeholder={placeholder} id={id} onChange={onChange}/>
       <RenderIcon id={id}/>
     </InputWrapper>
    );
